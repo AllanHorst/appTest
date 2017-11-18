@@ -5,11 +5,11 @@
       <form>
         <md-input-container>
           <label>Nome</label>
-          <md-input v-model="materia.nome"></md-input>
+          <md-input v-model="matter.name"></md-input>
         </md-input-container>
         <md-input-container>
           <label>Professor</label>
-          <md-input v-model="materia.professor"></md-input>
+          <md-input v-model="matter.teacher"></md-input>
         </md-input-container>
         <md-button class="md-primary" v-on:click="submit()">Salvar</md-button>
       </form>
@@ -28,16 +28,18 @@ export default {
   name: 'CadastroMaterias',
   data: () => {
       return {
-        materia: {
-          nome: '',
-          professor: ''
+        matter: {
+          name: '',
+          teacher: ''
       }
     }
   },
   methods: {
     submit() {
-      console.log(materiaService)
-      materiaService.salvar(this.materia)
+      URL = 'http://localhost:3000/'
+      this.$http.post(URL + '/matters', this.matter).then(data => {
+        console.log(data)
+      })
     }
   }
 }

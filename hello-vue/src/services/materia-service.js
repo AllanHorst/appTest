@@ -1,15 +1,11 @@
 export default class MateriaService {
-
+  URL = 'http://localhost:3000/'
   KEY = 'MATERIA'
 
-  salvar(materia) {
-    str = JSON.stringify(materia)
-    localStorage.setItem(key, str)
+  salvar(matter) {
   }
 
   carregar() {
-    lista = localStorage.getItem(key) || "[]"
-    return JSON.parse()
   }
 
 }
