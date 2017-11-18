@@ -6,11 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-<<<<<<< HEAD
     "start": "node server.js",
-=======
-    "start": "npm run dev",
->>>>>>> 60002580d25440d3850c88cb67a9104b9486060c
     "build": "node build/build.js"
   },
   "dependencies": {
